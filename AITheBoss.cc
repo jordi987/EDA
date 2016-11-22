@@ -28,7 +28,7 @@ struct PLAYER_NAME : public Player {
   virtual void play () {
     VE f = farmers(0);
     for (int id : f) {
-      //TODO detectar a los de mi equipo
+      //TODO detectar a los de mi equipo y rivales para poder avanzar
       Pos pos= unit(id).pos;
       if ( not safe(pos) and cell(pos+Right).type == Empty) command(id,Right);
       else if ( not safe(pos) and cell(pos+Left).type == Empty) command(id, Left);
