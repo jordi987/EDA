@@ -11,7 +11,6 @@
 # to AIDummy.o
 #
 # 2) Uncomment the following line.
-#
 #DUMMY_OBJ = AIDummy.o
 
 # Add here any extra .o player files you want to link to the executable
@@ -50,17 +49,17 @@ LDFLAGS  = -std=c++11 -lm $(ARCHFLAGS) $(PROFILEFLAGS) $(DEBUGFLAGS) -O$(strip $
 
 # Rules
 
-all: Game 
+all: Game
 
 clean:
 	rm -rf Game SecGame *.o *.exe Makefile.deps
 
 # Order of objects is important here to deactivate standard sleep function.
 
-Game: Structs.o Settings.o State.o Info.o Random.o Board.o Action.o Player.o Registry.o Game.o Main.o $(PLAYERS_OBJ) Utils.o 
+Game: Structs.o Settings.o State.o Info.o Random.o Board.o Action.o Player.o Registry.o Game.o Main.o $(PLAYERS_OBJ) Utils.o
 	$(CXX) $^ -o $@ $(LDFLAGS)
 
-SecGame: Structs.o Settings.o State.o Info.o Random.o Board.o Action.o Player.o Registry.o SecGame.o SecMain.o Utils.o 
+SecGame: Structs.o Settings.o State.o Info.o Random.o Board.o Action.o Player.o Registry.o SecGame.o SecMain.o Utils.o
 	$(CXX) $^ -o $@ $(LDFLAGS)
 
 %.exe: %.o Structs.o Settings.o State.o Info.o Random.o Board.o Action.o Player.o Registry.o SecGame.o SecMain.o Utils.o
