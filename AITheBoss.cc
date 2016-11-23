@@ -19,34 +19,30 @@ struct PLAYER_NAME : public Player {
   }
 
   typedef vector<int> VE;
+  typedef vector <vector <bool> > graph;
 
-/*  bool safe(Pos& pos) {
-    if (cell(pos).type != Wall and not cell(pos).haunted and cell(pos).id == 1) return false;
-    else return true;
-  }*/
+  bool bfs(graph& g, int x, int y){
+    if (!g[x][y]) {
+      g[x][y] = true;
 
-  /*bool dfsfarmers(Pos pos) {
-   if (unit(cell(pos).id).type == Knight and unit(cell(pos).id).player > 0) return false;
-    if (unit(cell(pos).id).type == Witch) return false;
-  else if (cell(pos).type == Wall) return false;
-    /*else {
-        int x, y;
-        x = pos.i;
-        y = pos.j;
-        if (x + 1 < 37 and dfsfarmers(pos+Bottom)) return true;
-        if (x - 1 < 37 and dfsfarmers(pos+Right)) return true;
-        if (y + 1 < 37 and dfsfarmers(pos+Top)) return true;
-        if (y - 1 < 37 and dfsfarmers(pos+Left)) return true;
     }
-    else return true;
-  }*/
+  }
+
 
   virtual void play () {
     //TODO farmers dfs teniendo en cuenta que no este ocupada
     // que no haya brujan a distancia manhattan y knights. Si mal salud tirar para atras
     VE f = farmers(0);
     for (int id : f) {
-      Pos pos= unit(id).pos;
+      graph g(37, vector<bool>(37, false));
+      if (unit(id).health >= 50) {
+        int x,y;
+        x = unit(id).pos.i;
+        y = unit(id).pos.j;
+        //TODO bfs de hasta distancia tres y si todos libres random
+
+      }
+      else command(id, None);
     }
 
 
@@ -58,15 +54,11 @@ struct PLAYER_NAME : public Player {
     }
     VE w = witches(0);
     for (int id : w) {
-      //TODO: bruja bfs que mate todo aquello que este cerca
-      command(id, Right);
-    }
 
+    }      //TODO: bruja bfs que mate todo aquello que este cerca
+      command(id, None);
   }
-
 };
-
-
 
 /**
  * Do not modify the following line.
