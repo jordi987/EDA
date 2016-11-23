@@ -20,31 +20,46 @@ struct PLAYER_NAME : public Player {
 
   typedef vector<int> VE;
 
-  bool safe(Pos& pos) {
-    if (cell(pos+Bottom).type == Wall or cell(pos+Bottom).haunted or cell(pos+Bottom).id == 1) return false;
+/*  bool safe(Pos& pos) {
+    if (cell(pos).type != Wall and not cell(pos).haunted and cell(pos).id == 1) return false;
     else return true;
-  }
+  }*/
+
+  /*bool dfsfarmers(Pos pos) {
+   if (unit(cell(pos).id).type == Knight and unit(cell(pos).id).player > 0) return false;
+    if (unit(cell(pos).id).type == Witch) return false;
+  else if (cell(pos).type == Wall) return false;
+    /*else {
+        int x, y;
+        x = pos.i;
+        y = pos.j;
+        if (x + 1 < 37 and dfsfarmers(pos+Bottom)) return true;
+        if (x - 1 < 37 and dfsfarmers(pos+Right)) return true;
+        if (y + 1 < 37 and dfsfarmers(pos+Top)) return true;
+        if (y - 1 < 37 and dfsfarmers(pos+Left)) return true;
+    }
+    else return true;
+  }*/
 
   virtual void play () {
+    //TODO farmers dfs teniendo en cuenta que no este ocupada
+    // que no haya brujan a distancia manhattan y knights. Si mal salud tirar para atras
     VE f = farmers(0);
     for (int id : f) {
-      //TODO detectar a los de mi equipo y rivales para poder avanzar
       Pos pos= unit(id).pos;
-      if ( not safe(pos) and cell(pos+Right).type == Empty) command(id,Right);
-      else if ( not safe(pos) and cell(pos+Left).type == Empty) command(id, Left);
-      else command(id, Bottom);
     }
+
 
     VE k = knights(0);
     for (int id : k) {
       //TODO: knight
-      command(id, None);
+      command(id, Left);
 
     }
     VE w = witches(0);
     for (int id : w) {
-      //TODO: witches in the exactly position
-      command(id, None);
+      //TODO: bruja bfs que mate todo aquello que este cerca
+      command(id, Right);
     }
 
   }
