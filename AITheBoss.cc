@@ -25,7 +25,7 @@ struct PLAYER_NAME : public Player {
   map <int, pair<Pos, bool> > cami; //farmers map para saber si tienen camino si no tienen bfs.
   //pos es la posicion a la que tiene que ir.
 
-  map <Pos, int > distancias // si la casilla esta en distancias es que hay un farmer
+  map <Pos, int > distancias; // si la casilla esta en distancias es que hay un farmer
   //que tiene que ir a esa posicion. Si hay otro farmer que tiene que ir a la misma
   //cell entonces coger el que tenga la distancia mas corta y hacer que el otro busque otra
 
@@ -38,20 +38,15 @@ struct PLAYER_NAME : public Player {
   }
 
   Dir dirfast(Pos& act, Pos& aux) {
-    int x,y,a,b;
-    x = act.i;
-    y = act.j;
-    a = aux.i;
-    b = aux.j;
-    if ( x == a and y < b) return Top;
-    if ( x == a and y > b) return Bottom;
-    if ( x > a and y == b) return Left;
-    if ( x < a and y == b) return Right;
+    if ( act.j == aux.j and act.i > aux.i) return Top;
+    if ( act.j == aux.j and act.i < aux.i) return Bottom;
+    if ( act.j > aux.j and act.i == aux.i) return Left;
+    if ( act.j < aux.j and act.i == act.i) return Right;
     else None;
   }
 
   // TODO: si hay mas de una posicion vacia random!!!!
-  Pos bfs_farmers(graph& g, Pos& pos, queue <Pos>& Q ){
+  Pos bfs_farmers(Pos& pos, queue <Pos>& Q ){
     bool found = false; // camino
     Q.push(pos);
     while (not Q.empty() and not found) {
@@ -59,13 +54,29 @@ struct PLAYER_NAME : public Player {
       Pos seg2;
       seg2 = seg + Top;
       //SOLO TIENES QUE AÑADIR POSICIONES EN LA COLA SI NOT FOUND D:
-      if
-
-
+    }
+  }
   virtual void play () {
     VE f = farmers(0);
     for (int id : f) {
-      auto it =
+      //TODO : revisar
+      Pos act = unit(id).pos;
+      Pos fut;
+      queue<Pos> Q;
+      auto it = cami.find(id);
+      if (it != cami.end()) {
+        if (it->second.second)  {
+          command(id, dirfast(act, it->second.first));
+        }
+        else {
+          fut = bfs_farmers(act, Q);
+        }
+      }else {
+        cami.insert(make_pair(id,pair<Pos,bool>(act,false)));
+        it ->second.first = bfs_farmers(act, Q);
+        it ->second.second = true;
+      }
+    }
 
 
 //1. provar que funcione la funcion dirfast
@@ -73,15 +84,6 @@ struct PLAYER_NAME : public Player {
 // si tiene cmamino enviar pos actual y final
 
 
-
- //auto it no hace falta poner todo esto auto aux = path.find(id)
-        Pos act = unit(id).pos;
-        Pos aux;
-        queue <Pos> Q;
-        aux = bfs_farmers(g, act, Q);
-        command(id, dirfast(act,aux) );
-      //}
-    }
     VE k = knights(0);
     for (int id : k) {
       //TODO: knight
