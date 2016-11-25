@@ -20,9 +20,14 @@ struct PLAYER_NAME : public Player {
 
   typedef vector<int> VE;
   typedef vector <vector <bool> > graph;
+  typedef pair <int, bool> Frm; // int = distancia y bool es camino
 
-  map <int, bool> path; //farmers map para saber si tienen camino si no tienen bfs
+  map <int, pair<Pos, bool> > cami; //farmers map para saber si tienen camino si no tienen bfs.
+  //pos es la posicion a la que tiene que ir.
 
+  map <Pos, int > distancias // si la casilla esta en distancias es que hay un farmer
+  //que tiene que ir a esa posicion. Si hay otro farmer que tiene que ir a la misma
+  //cell entonces coger el que tenga la distancia mas corta y hacer que el otro busque otra
 
 
   bool security(const Pos& p) {
@@ -50,57 +55,26 @@ struct PLAYER_NAME : public Player {
     bool found = false; // camino
     Q.push(pos);
     while (not Q.empty() and not found) {
-      Pos aux = Q.front();  Q.pop();
-      int x = aux.i;
-      int y = aux.j;
-      if (!g[x][y]) {
-        g[x][y] = true;
-        Pos aux2;
-       aux2 = aux + Top;
-        if ( security(aux2) and cell(aux2).owner >= 0) {
-          Q.push(aux2);
-        }
-        else if (security(aux2) and cell(aux2).owner == -1) {
-          found = true;
-          return aux2;
-        }
-        aux2 = aux + Right;
-        if ( security(aux2) and cell(aux2).owner >= 0) {
-          Q.push(aux2);
-        }
-        else if (security(aux2) and cell(aux2).owner == -1) {
-          found = true;
-          return aux2;
-        }
-        aux2 = aux + Left;
-        if ( security(aux2) and cell(aux2).owner >= 0) {
-           Q.push(aux2);
-        }
-        else if (security(aux2) and cell(aux2).owner == -1) {
-          found = true;
-          return aux2;
-        }
-        aux2 = aux + Bottom;
-        if ( security(aux2) and cell(aux2).owner >= 0) {
-          Q.push(aux2);
-        }
-        else if (security(aux2) and cell(aux2).owner == -1) {
-          found = true;
-          return aux2;
-        }
-      }
-    }
-  }
+      Pos seg = Q.front();  Q.pop();
+      Pos seg2;
+      seg2 = seg + Top;
+      //SOLO TIENES QUE AÑADIR POSICIONES EN LA COLA SI NOT FOUND D:
+      if
 
 
   virtual void play () {
     VE f = farmers(0);
     for (int id : f) {
-      graph g(37, vector<bool>(37, false));
-    //  map <int, bool>::const_iterator aux = path.find(id);
-    //  if (aux == path.end() ) path.insert(make_pair(id, false));
-      //  map <int, bool>::const_iterator i = path.find(id);
-    //  if (unit(id).health >= 50 and (i->second == false)) {
+      auto it =
+
+
+//1. provar que funcione la funcion dirfast
+
+// si tiene cmamino enviar pos actual y final
+
+
+
+ //auto it no hace falta poner todo esto auto aux = path.find(id)
         Pos act = unit(id).pos;
         Pos aux;
         queue <Pos> Q;
@@ -108,8 +82,6 @@ struct PLAYER_NAME : public Player {
         command(id, dirfast(act,aux) );
       //}
     }
-
-
     VE k = knights(0);
     for (int id : k) {
       //TODO: knight
