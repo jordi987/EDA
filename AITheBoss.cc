@@ -22,12 +22,16 @@ struct PLAYER_NAME : public Player {
   typedef vector <vector <bool> > graph;
   typedef pair <int, bool> Frm; // int = distancia y bool es camino
 
-  map <int, pair<Pos, bool> > cami; //farmers map para saber si tienen camino si no tienen bfs.
+  map <int, bool> cami; //farmers map para saber si tienen camino si no tienen bfs.
   //pos es la posicion a la que tiene que ir.
+
+  map <int, queue<Pos> > cami_seguir;
 
   map <Pos, int > distancias; // si la casilla esta en distancias es que hay un farmer
   //que tiene que ir a esa posicion. Si hay otro farmer que tiene que ir a la misma
   //cell entonces coger el que tenga la distancia mas corta y hacer que el otro busque otra
+
+
 
 
   bool security(const Pos& p) {
@@ -37,7 +41,14 @@ struct PLAYER_NAME : public Player {
     else return true;
   }
 
-  Dir dirfast(Pos& act, Pos& aux) {
+  Dir dirfast(Unit ud, queue <Pos>& Cami) {
+    Pos act = ud.pos;
+    Pos aux = Cami.front();
+    Cami.pop();
+    if (Cami.empty()) {
+      auto it = cami.find(ud.id);
+      it ->second = false;
+    }
     if ( act.j == aux.j and act.i > aux.i) return Top;
     if ( act.j == aux.j and act.i < aux.i) return Bottom;
     if ( act.j > aux.j and act.i == aux.i) return Left;
@@ -46,7 +57,7 @@ struct PLAYER_NAME : public Player {
   }
 
   // TODO: si hay mas de una posicion vacia random!!!!
-  Pos bfs_farmers(Pos& pos, queue <Pos>& Q ){
+  void bfs_farmers(Pos& pos, queue <Pos>& Q, queue <Pos>& aux ){
     bool found = false; // camino
     Q.push(pos);
     while (not Q.empty() and not found) {
@@ -56,32 +67,43 @@ struct PLAYER_NAME : public Player {
       //SOLO TIENES QUE AÑADIR POSICIONES EN LA COLA SI NOT FOUND D:
     }
   }
+
+
   virtual void play () {
     VE f = farmers(0);
     for (int id : f) {
       //TODO : revisar
       Pos act = unit(id).pos;
-      Pos fut;
-      queue<Pos> Q;
+      queue<Pos> Q; //cola para bfs
       auto it = cami.find(id);
       if (it != cami.end()) {
-        if (it->second.second)  {
-          command(id, dirfast(act, it->second.first));
+        auto it2 = cami_seguir.find(id);
+        if (it->second)  {
+          command(id, dirfast(unit(id), it2->second));
         }
         else {
-          fut = bfs_farmers(act, Q);
+          queue <Pos> aux;
+          bfs_farmers(act, Q, aux);
+          it ->second = true;
+          it2->second = aux;
+          command(id,dirfast(unit(id), aux));
         }
-      }else {
-        cami.insert(make_pair(id,pair<Pos,bool>(act,false)));
-        it ->second.first = bfs_farmers(act, Q);
-        it ->second.second = true;
+      } else {
+        cami.insert(make_pair(id,false));
+        queue <Pos> aux;
+        bfs_farmers(act, Q, aux);
+        it ->second = true;
+        cami_seguir.insert(make_pair(id, aux));
+        command(id,dirfast(unit(id), aux));
       }
     }
 
 
-//1. provar que funcione la funcion dirfast
+//tarde : bfs y domingo
 
-// si tiene cmamino enviar pos actual y final
+//lunes:caballeros
+
+//miercoles :brujas
 
 
     VE k = knights(0);
