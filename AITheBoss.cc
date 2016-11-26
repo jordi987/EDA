@@ -20,19 +20,6 @@ struct PLAYER_NAME : public Player {
 
   typedef vector<int> VE;
   typedef vector <vector <bool> > graph;
-  typedef pair <int, bool> Frm; // int = distancia y bool es camino
-
-  map <int, bool> cami; //farmers map para saber si tienen camino si no tienen bfs.
-  //pos es la posicion a la que tiene que ir.
-
-  map <int, queue<Pos> > cami_seguir;
-
-  map <Pos, int > distancias; // si la casilla esta en distancias es que hay un farmer
-  //que tiene que ir a esa posicion. Si hay otro farmer que tiene que ir a la misma
-  //cell entonces coger el que tenga la distancia mas corta y hacer que el otro busque otra
-
-
-
 
   bool security(const Pos& p) {
     if (cell(p).type == Wall) return false;
@@ -41,31 +28,88 @@ struct PLAYER_NAME : public Player {
     else return true;
   }
 
-  Dir dirfast(Unit ud, queue <Pos>& Cami) {
-    Pos act = ud.pos;
-    Pos aux = Cami.front();
-    Cami.pop();
-    if (Cami.empty()) {
-      auto it = cami.find(ud.id);
-      it ->second = false;
-    }
+  Dir dirfast(const Pos& act, const Pos& aux) {
     if ( act.j == aux.j and act.i > aux.i) return Top;
     if ( act.j == aux.j and act.i < aux.i) return Bottom;
     if ( act.j > aux.j and act.i == aux.i) return Left;
-    if ( act.j < aux.j and act.i == act.i) return Right;
-    else None;
+    if ( act.j < aux.j and act.i == aux.i) return Right;
+    if (act.j == aux.j and act.i == aux.i) return None;
   }
 
-  // TODO: si hay mas de una posicion vacia random!!!!
-  void bfs_farmers(Pos& pos, queue <Pos>& Q, queue <Pos>& aux ){
-    bool found = false; // camino
-    Q.push(pos);
-    while (not Q.empty() and not found) {
-      Pos seg = Q.front();  Q.pop();
-      Pos seg2;
-      seg2 = seg + Top;
-      //SOLO TIENES QUE AÑADIR POSICIONES EN LA COLA SI NOT FOUND D:
+  Pos res_bfs (const Pos& res, const Pos& act, const map <Pos,Pos>& camino) {
+    auto it = camino.find(res);
+    Pos aux = it->second;
+    while ( aux != act) {
+        it = camino.find(aux);
+        aux = it->second;
+        break;
     }
+    return it->first;
+  }
+
+
+  Pos bfs_farmers(const Pos& act, queue <Pos>& Q){
+    bool found = false; // camino
+    map <Pos, Pos> camino;
+    vector<Pos> posibles;
+    Q.push(act);
+    Pos ant = Q.front(); // anterior es para que el bfs en la busqueda no mire la posicion de donde viene. El "padre"
+    while (not found and not Q.empty() ) {
+      Pos pos = Q.front();
+      Q.pop();
+      // Miramos arriba
+      Pos pos2 = pos + Top;
+      if (security(pos2) and pos2 != ant) {
+        if (cell(pos2).owner == -1) {
+          found = true;
+          posibles.push_back(pos2);
+          camino.insert(make_pair(pos2,pos));
+        } else if (cell(pos2).owner >= 0) {
+          Q.push(pos2);
+          camino.insert(make_pair(pos2,pos));
+        }
+      }
+      //miramos izquierda
+      pos2 = pos + Left;
+      if (security(pos2) and pos2 != ant) {
+        if (cell(pos2).owner == -1) {
+          found = true;
+          posibles.push_back(pos2);
+          camino.insert(make_pair(pos2,pos));
+        } else if (cell(pos2).owner >= 0) {
+          Q.push(pos2);
+          camino.insert(make_pair(pos2,pos));
+        }
+      }
+
+      //miramos abajo
+      pos2 = pos + Bottom;
+      if (security(pos2) and pos2 != ant) {
+        if (cell(pos2).owner == -1) {
+          found = true;
+          posibles.push_back(pos2);
+          camino.insert(make_pair(pos2,pos));
+        } else if (cell(pos2).owner >= 0) {
+          Q.push(pos2);
+          camino.insert(make_pair(pos2,pos));
+        }
+      }
+      //miramos derecha
+      pos2 = pos + Right;
+      if (security(pos2) and pos2 != ant) {
+        if (cell(pos2).owner == -1) {
+          found = true;
+          posibles.push_back(pos2);
+          camino.insert(make_pair(pos2,pos));
+        } else if (cell(pos2).owner >= 0) {
+          Q.push(pos2);
+          camino.insert(make_pair(pos2,pos));
+        }
+      }
+      ant = pos;
+    }
+    if (posibles.size() > 0) return res_bfs(posibles[random(0, posibles.size() - 1)], act, camino);
+    else if (posibles.size() == 0 ) return act;
   }
 
 
@@ -73,37 +117,13 @@ struct PLAYER_NAME : public Player {
     VE f = farmers(0);
     for (int id : f) {
       //TODO : revisar
+      if (round() == 5) cerr << "ronda 5" << endl;
       Pos act = unit(id).pos;
       queue<Pos> Q; //cola para bfs
-      auto it = cami.find(id);
-      if (it != cami.end()) {
-        auto it2 = cami_seguir.find(id);
-        if (it->second)  {
-          command(id, dirfast(unit(id), it2->second));
-        }
-        else {
-          queue <Pos> aux;
-          bfs_farmers(act, Q, aux);
-          it ->second = true;
-          it2->second = aux;
-          command(id,dirfast(unit(id), aux));
-        }
-      } else {
-        cami.insert(make_pair(id,false));
-        queue <Pos> aux;
-        bfs_farmers(act, Q, aux);
-        it ->second = true;
-        cami_seguir.insert(make_pair(id, aux));
-        command(id,dirfast(unit(id), aux));
-      }
+      Pos fin = bfs_farmers(act, Q);
+      command(id,dirfast(act, fin));
     }
 
-
-//tarde : bfs y domingo
-
-//lunes:caballeros
-
-//miercoles :brujas
 
 
     VE k = knights(0);
