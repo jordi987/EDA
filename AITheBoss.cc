@@ -21,6 +21,9 @@ struct PLAYER_NAME : public Player {
   typedef vector<int> VE;
   typedef vector <vector <bool> > graph;
 
+//TODO se quedan parados farmers y caballeros acceso error memoria
+
+
   //INICIALIZAMOS MATRIZES
 
   void secureWithces(graph& g, const Pos& p) {
@@ -51,8 +54,6 @@ struct PLAYER_NAME : public Player {
     }
   }
 
-
-//TODO OJO
   void secureKnight(graph& g,const Pos& p) {
     for (int a = 0; a < 8; ++a) {
       Pos sec = p;
