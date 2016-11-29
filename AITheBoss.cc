@@ -21,15 +21,15 @@ struct PLAYER_NAME : public Player {
   typedef vector<int> VE;
   typedef vector <vector <bool> > graph;
 
-//TODO se quedan parados farmers y caballeros acceso error memoria
-
-
+  struct D {
+    Pos p;
+    Dir dir;
+  };
   //INICIALIZAMOS MATRIZES
 
   void secureWithces(graph& g, const Pos& p) {
     for (int a = 0; a < 4; ++a) {
       Pos sec = p;
-      //primero bottom, luego right, luego top, luego left
       for ( int b = 0; b < 3; ++b) {
         sec = sec + Dir(a*2);
         if (pos_ok(sec)) {
@@ -65,11 +65,8 @@ struct PLAYER_NAME : public Player {
   void inic (graph& farm) {
     for (int i = 0; i < rows(); ++i) {
       for ( int  j = 0; j < cols(); ++j) {
-        //muro
         if (cell(i,j).type == Wall) farm[i][j] = false;
-        //farm
         if (cell(i,j).id != -1 and unit(cell(i,j).id).type == Farmer) farm[i][j] = false;
-        //witches y posiciones a atacar
         if (cell(i,j).id != -1 and unit(cell(i,j).id).type == Witch) {
           farm[i][j] = false;
           Pos p;
@@ -77,9 +74,7 @@ struct PLAYER_NAME : public Player {
           p.j = j;
           secureWithces(farm, p);
         }
-        //knights y posiciones a atacar
-        //TODO PAU CON unit(cell(i,j).id).player > 0  o sin esto en el if
-        if (cell(i,j).id != -1 and unit(cell(i,j).id).type == Knight) {
+        if (cell(i,j).id != -1 and unit(cell(i,j).id).type == Knight and unit(cell(i,j).id).player != 0) {
           farm[i][j] = false;
           Pos p;
           p.i = i;
@@ -93,11 +88,7 @@ struct PLAYER_NAME : public Player {
   void inic2(graph& kni) {
     for (int i = 0; i < rows(); ++i) {
       for ( int  j = 0; j < cols(); ++j) {
-        //muro
         if (cell(i,j).type == Wall) kni[i][j] = false;
-        //farm mios
-        if (cell(i,j).id != -1 and unit(cell(i,j).id).type == Farmer and unit(cell(i,j).id).player == 0) kni[i][j] = false;
-        //witches y posiciones a atacar
         if (cell(i,j).id != -1 and unit(cell(i,j).id).type == Witch) {
           kni[i][j] = false;
           Pos p;
@@ -112,11 +103,7 @@ struct PLAYER_NAME : public Player {
   void inic3(graph& witch) {
     for (int i = 0; i < rows(); ++i) {
       for ( int  j = 0; j < cols(); ++j) {
-        //muro
         if (cell(i,j).type == Wall) witch[i][j] = false;
-        //farmers mios
-        if (cell(i,j).id != -1 and unit(cell(i,j).id).type == Farmer and unit(cell(i,j).id).player == 0) witch[i][j] = false;
-        //witches y posiciones a atacar
         if (cell(i,j).id != -1 and unit(cell(i,j).id).type == Witch and unit(cell(i,j).id).player > 0) {
           witch[i][j] = false;
           Pos p;
@@ -130,99 +117,100 @@ struct PLAYER_NAME : public Player {
 
   //FINALIZAMOS INICIALIZACIONES MATRIZES
 
-  Dir dirfast(const Pos& act, const Pos& aux) {
-    if ( act.j == aux.j and act.i > aux.i) return Top;
-    if ( act.j == aux.j and act.i < aux.i) return Bottom;
-    if ( act.j > aux.j and act.i == aux.i) return Left;
-    if ( act.j < aux.j and act.i == aux.i) return Right;
-    if (act.j == aux.j and act.i == aux.i) return None;
-  }
-
-  Pos res_bfs (const Pos& res, const Pos& act, const map <Pos,Pos>& camino) {
-    auto it = camino.find(res);
-    auto it2 = camino.find(act);
-    while ( (it->second) != (it2->first)) {
-        it = camino.find(it->second);
-    }
-    return it->first;
-  }
-
   //BFS
 
-  Pos bfs_knight(const Pos& act, queue <Pos>& Q, const graph& kni){
-    cerr << "hola" << endl;
-    bool found = false; // camino
-    map <Pos, Pos> camino; //llave hijo, referencia padre
-    vector<Pos> posibles;
+  Dir bfs_witch(const Pos& act, queue <D>& Q, const graph& witch){
+    bool found = false;
     graph vis(rows(), vector <bool> (cols(), false));
-    Pos padre;
-    padre.i = -1;
-    padre.j = -1;
-    camino.insert(make_pair(act,padre));
-    Q.push(act);
+    D pres;
+    pres.p = act;
+    pres.dir = None;
+    Q.push(pres);
     vis[act.i][act.j] = true;
     while (not found and not Q.empty() ) {
-      Pos pos = Q.front();
+      D pos = Q.front();
       Q.pop();
-      for ( int i = 0; i < 8; ++i) {
-        Pos pos2 = pos + Dir(i);
-        if (pos_ok(pos2) and kni[pos2.i][pos2.j] and !vis[pos2.i][pos2.j]) {
-          if (unit(cell(pos2).id).type == Farmer and unit(cell(pos2).id).player > 0) {
+      for ( int i = 0; i < 4; ++i) {
+        D pos2;
+        pos2.p = pos.p + Dir(i*2);
+        pos2.dir = pos.dir;
+        if (pos_ok(pos2.p) and witch[pos2.p.i][pos2.p.j] and !vis[pos2.p.i][pos2.p.j]) {
+          if (pos2.dir == None) pos2.dir = Dir(i*2);
+          if (cell(pos2.p).id != -1 and unit(cell(pos2.p).id).type == Knight and unit(cell(pos2.p).id).player != 0){
             found = true;
-            posibles.push_back(pos2);
-            camino.insert(make_pair(pos2,pos));
-          } else if (unit(cell(pos2).id).type == Knight and unit(cell(pos2).id).player > 0){
-            found = true;
-            posibles.push_back(pos2);
-            camino.insert(make_pair(pos2,pos));
+            return pos2.dir;
           } else {
-            vis[pos2.i][pos2.j] = true;
+            vis[pos2.p.i][pos2.p.j] = true;
             Q.push(pos2);
-            camino.insert(make_pair(pos2,pos));
           }
         }
       }
     }
-    if (posibles.size() > 0) return res_bfs(posibles[random(0, posibles.size() - 1)], act, camino);
-    else if (posibles.size() == 0 ) return act;
+    if (!found) return None;
   }
 
 
-  Pos bfs_farmers(const Pos& act, queue <Pos>& Q, const graph& farm){
-    bool found = false; // camino
-    map <Pos, Pos> camino; //llave hijo, referencia padre
-    vector<Pos> posibles;
+  Dir bfs_knight(const Pos& act, queue <D>& Q, const graph& kni){
+    bool found = false;
     graph vis(rows(), vector <bool> (cols(), false));
-    Pos padre;
-    padre.i = -1;
-    padre.j = -1;
-    camino.insert(make_pair(act,padre));
-    Q.push(act);
+    D pres;
+    pres.p = act;
+    pres.dir = None;
+    Q.push(pres);
     vis[act.i][act.j] = true;
     while (not found and not Q.empty() ) {
-      Pos pos = Q.front();
+      D pos = Q.front();
       Q.pop();
-      for ( int i = 0; i < 4; ++i) {
-        Pos pos2 = pos + Dir(i*2);
-        if (pos_ok(pos2) and farm[pos2.i][pos2.j] and !vis[pos2.i][pos2.j]) {
-          if (cell(pos2).owner == -1) {
+      for ( int i = 0; i < 8; ++i) {
+        D pos2;
+        pos2.p = pos.p + Dir(i);
+        pos2.dir = pos.dir;
+        if (pos_ok(pos2.p) and kni[pos2.p.i][pos2.p.j] and !vis[pos2.p.i][pos2.p.j]) {
+          if (pos2.dir == None) pos2.dir = Dir(i);
+          if (cell(pos2.p).id != -1 and unit(cell(pos2.p).id).type != Witch and unit(cell(pos2.p).id).player != 0) {
             found = true;
-            posibles.push_back(pos2);
-            camino.insert(make_pair(pos2,pos));
-          } else if (cell(pos2).owner >= 0) {
-            vis[pos2.i][pos2.j] = true;
+            return pos2.dir;
+          } else {
+            vis[pos2.p.i][pos2.p.j] = true;
             Q.push(pos2);
-            camino.insert(make_pair(pos2,pos));
           }
         }
       }
     }
-    if (posibles.size() > 0) return res_bfs(posibles[random(0, posibles.size() - 1)], act, camino);
-    else if (posibles.size() == 0 ) return act;
+    if (!found) return None;
+  }
+
+  Dir bfs_farmers(const Pos& act, queue <D>& Q, const graph& farm){
+    bool found = false;
+    graph vis(rows(), vector <bool> (cols(), false));
+    D pres;
+    pres.p = act;
+    pres.dir = None;
+    Q.push(pres);
+    vis[act.i][act.j] = true;
+    while (not found and not Q.empty() ) {
+      D pos = Q.front();
+      Q.pop();
+      for ( int i = 0; i < 4; ++i) {
+        D pos2;
+        pos2.p = pos.p + Dir(i*2);
+        pos2.dir = pos.dir;
+        if (pos_ok(pos2.p) and farm[pos2.p.i][pos2.p.j] and !vis[pos2.p.i][pos2.p.j]) {
+          if (pos2.dir == None) pos2.dir = Dir(i*2);
+          if (cell(pos2.p).owner != 0) {
+            found = true;
+            return pos2.dir;
+          } else if (cell(pos2.p).owner == 0) {
+            vis[pos2.p.i][pos2.p.j] = true;
+            Q.push(pos2);
+          }
+        }
+      }
+    }
+    if (!found) return None;
   }
 
   virtual void play () {
-    //falso MALO
     graph farm(rows(), vector <bool> (cols(), true));
     graph kni(rows(), vector <bool> (cols(), true));
     graph witch(rows(), vector <bool> (cols(), true));
@@ -232,23 +220,22 @@ struct PLAYER_NAME : public Player {
     VE f = farmers(0);
     for (int id : f) {
       Pos act = unit(id).pos;
-      queue<Pos> Q; //cola para bfs
-      Pos fin = bfs_farmers(act, Q, farm);
-      command(id,dirfast(act, fin));
+      queue <D> Q;
+      command(id, bfs_farmers(act, Q, farm));
     }
-
-
 
     VE k = knights(0);
     for (int id : k) {
       Pos act = unit(id).pos;
-      queue<Pos> Q; //cola para bfs
-      Pos fin = bfs_knight(act, Q, kni);
-      command(id,dirfast(act, fin));
+      queue <D> Q;
+      command(id, bfs_knight(act, Q, kni));
     }
+
     VE w = witches(0);
     for (int id : w) {
-        //TODO: bruja bfs que mate todo aquello que este cerca
+      Pos act = unit(id).pos;
+      queue <D> Q;
+      command(id, bfs_witch(act, Q, witch));
     }
   }
 };
