@@ -1,0 +1,1455 @@
+=== Preguntas Extracted Fotos ===
+
+**************************1.jpg****************************
+
+Es diu que un mètode àgil com SCRUM és convenient en projectes amb molts requisits emergents perquè:
+
+Trieu-ne una o més:
+ 
+Hi ha molt pocs requisits que no siguin emergents
+ 
+Els requisits emergents es poden expressar bé mitjançant històries d'usuari
+ 
+El product backlog conté els requisits emergents
+ 
+# Permet descobrir aviat els requisits emergents
+ 
+Els usuaris intervenen en la definició dels requisits emergents
+ 
+**************************2.jpg****************************
+
+Quina de les següents consideres que és la millor definició de deute tècnic:
+
+Trieu-ne una:
+ 
+Cost de la feina dels tècnics feta en el projecte que s'ha de pagar.
+ 
+# Feina que calia haver fet abans de donar per acabat el projecte i que no s'ha fet.
+ 
+Feina de caràcter tècnic que falta fer en el projecte.
+ 
+Volum de la feina necessaria per realitzar la documentació tècnica del projecte.
+ 
+Cost de la documentació tècnica del projecte no feta.
+ 
+**************************3.jpg****************************
+
+El significat exacte de l'acrònim SMART varia segons els autors. Digues quin(s) del següents significats adoptem al Curs:
+
+Trieu-ne una o més:
+ 
+A: Achievable
+ 
+R: Reasonable
+ 
+# T: Time bound
+ 
+# R: Realistic
+ 
+# S: Specific
+
+T: Time-based
+ 
+# A: Agreed upon
+ 
+R: Relevant 
+ 
+**************************4.jpg****************************
+
+Es diu que els enginyers de software poden canviar el món perquè:
+
+Trieu-ne una o més:
+ 
+Poden modificar la infraestructura informàtica de les organitzacions
+ 
+# Poden canviar la manera com les persones fan les seves activitats
+ 
+# Poden canviar les activitats que fan les persones
+ 
+Poden canviar la legislació que afecta a persones o organitzacions
+ 
+Poden modificar els recursos que tenen les persones
+ 
+**************************5.jpg****************************
+
+Considera el requisit funcional següent (del sistema Atenea): "La nota que un estudiant obté en un qüestionari es calcula a partir de les respostes ales preguntes que conté”
+
+Digues de quins tipus és:
+ 
+Select one of more:
+ 
+# Verificable
+ 
+Formal
+ 
+# Informal
+ 
+# Persistent
+ 
+Implícit
+ 
+**************************6.jpg****************************
+
+Una característica de les entrevistes exploratòries es que:
+
+Trieu-ne una:
+ 
+És fàcil de comparar el resultat de les respostes a les preguntes
+ 
+L'entrevistador no porta una llista de preguntes preparades
+ 
+L'entrevistador es cenyeix a les preguntes que porta preparades
+ 
+# L'entrevistador es pot desviar de les preguntes que porta preparades
+ 
+L'entrevistat pot portar l'entrevista al seu aire 
+ 
+ 
+**************************7.jpg****************************
+Els projectes es poden classificar en funció de ”a qui" van adreçats. El projecte que fem en el quadrimestre actual va adreçat a:
+
+Trieu-ne una:
+ 
+Clients
+ 
+Clients i proveïdors
+ 
+Proveïdors
+ 
+# Un mercat
+ 
+**************************8.jpg****************************
+
+Indica quins dels requisits funcionals següents són part de l'esquema conceptual d'un sistema:
+
+Select one of more:
+ 
+Els implícits verificables
+ 
+Els implícits
+ 
+# Els formals
+ 
+# Els explícits verificables
+ 
+Els explícits no-verificables
+ 
+Els informals no-verificables
+ 
+Els explícits no persistents verificables
+  
+**************************9.jpg****************************
+
+Digues quina de les afirmacions següents es mes exacta en relació al concepte de precondició de cas d'ús:
+ 
+Trieu-ne una:
+ 
+A vegades, el sistema pot no saber si una precondició es compleix o no
+ 
+Si no es compleix la precondició, llavors d'ha d'executar alguna de les extensions del cas d'ús
+ 
+# Un cas d'ús no es pot iniciar si no es compleix la precondició
+ 
+És aconsellable que un cas d'ús comprovi que es satisfà la precondició
+ 
+L'escenari principal d'un cas d'ús no es pot iniciar si no es compleix la precondició 
+ 
+**************************10.jpg****************************
+
+Un client demana a un contractista que li ha de desenvolupar un sistema d’informació el següent (entre d’altres):
+ 
+El contractista processarà les peticiones de canvi en cinc dies
+El client podrà examinar els jocs de proves usats pel contractista
+En qualsevol moment, el sistema admetrà un mínim de 100 transaccions per segon.
+Per a la gestió de les configuracions, s’usarà l’eina Subversion.
+En condiciones normals, el temps de resposta no serà superior a dos segons en el 90% del casos.
+D’aquestes peticiones, dues són requisits del sistema que s’ha de desenvolupar.
+Quines són?
+ 
+# En condiciones normals, el temps de resposta no serà superior a dos segons en el 90% dels casos.
+ 
+# En qualsevol moment, el sistema admetrà un mínim de 100 transaccions per segon.
+ 
+Per a la gestió de les configuracions, s’usarà l’eina Subversion.
+ 
+El contractista processarà les peticiones de canvi en cinc dies.
+ 
+El client podrà examinar el jocs de proves usats pel contractista
+ 
+ 
+**************************11.jpg****************************
+
+Es diu que un requisit és formal quan:
+
+Trieu-ne una:
+ 
+es pot demostrar formalment que el sistema l'implementa
+ 
+# està definit en un llenguatge formal
+ 
+s'ha obtingut aplicant mètodes formals d'enginyeria de requisits
+ 
+es pot formalitzar
+ 
+es pot demostrar formalment que contribueix a l'assoliment dels objectius del sistema
+ 
+**************************12.jpg****************************
+
+Quan s'usa el mètode àgil anomenat SCRUM, els requisits estan a (una o més respostes):
+ 
+Trieu-ne una o més:
+ 
+Product increment
+ 
+Sprint backlog
+ 
+Daily SCRUM
+ 
+Sprint
+ 
+# Product backlog
+
+**************************13.jpg****************************
+
+Indica quina de les formulacions següents expressa millor el principi d'incertesa dels requisits de Humphrey:
+ 
+Trieu-ne una:
+ 
+Els requisits d'un sistema software no es poden saber del tot.
+ 
+Els requisits d'un sistema software no es poden saber del tot fins que els usuaris l’hagin usat.
+ 
+Els requisits d’un sistema software nou no es poden saber del tot.
+ 
+Els requisits d’un sistema software nou no es poden saber fins que els usuaris l'hagin usat.
+ 
+# Els requisits d’un sistema software nou no es poden saber del tot fins que els usuaris l’hagin usat.
+ 
+**************************14.jpg****************************
+
+Indica quina de les següents pràctiques és la menys usada en l’enginyeria de requisits àgil (segons l'estudi que s'ha presentat a classe):
+ 
+Trieu-ne una:
+ 
+Comunicació cara a cara
+ 
+Priorització extrema
+ 
+# Desenvolupament dirigit per proves
+ 
+Enginyeria de requisits iterativa
+ 
+Revisions i proves d'acceptació
+ 
+Planificació continua 
+ 
+**************************15.jpg****************************
+
+A l'hora d'estudiar el context del sistema, en distingim quatre facetes. Quines són?
+ 
+Trieu-ne una o més:
+ 
+# Subjecte
+ 
+Parts interessades
+ 
+# Tecnologia
+ 
+# Ús
+ 
+Casos d'ús
+ 
+Objectius
+ 
+# Desenvolupament
+ 
+Entorn
+
+**************************16.jpg****************************
+
+Considera un sistema de gestió acadèmica d’una universitat, que inclou la matrícula dels estudiants. Un element important del context en aquest cas serà la normativa acadèmica pròpia de la universitat. Indica a quina de les facetes següents correspondria aquesta normativa.
+
+Trieu-ne una:
+
+Ús
+
+Desenvolupament 
+
+Tecnologia
+
+# Subjecte
+
+**************************17.jpg****************************
+
+Un requisit emergent pot ser (trieu-ne una o més):
+
+Trieu-ne una o més:
+
+Un objectiu
+
+# Un requisit de qualitat
+
+Una hipòtesi del domini
+
+# Un requisit funcional
+
+Una expectativa
+
+**************************18.jpg****************************
+
+Considera, en un sistema que enregistra els seus usuaris amb el nom, adreça, etc, l’afirmació:
+“Els usuaris podran canviar l’adreça que tenen registrada al sistema”
+De quin dels tipus següents és aquesta afirmació?
+
+Trieu-ne una:
+
+# Requisit funcional
+
+Hipòtesi del domini
+
+Requisit de qualitat
+
+Expectativa
+
+Propietat del domini
+
+**************************19.jpg****************************
+
+Digues quines de les següents són activitats principals en la determinació de requisits:
+
+Trieu-ne una o més:
+
+Especificar els requisits determinats
+
+# Determinar els requisits existents de les fonts identificades
+
+# Identificar les fonts rellevants de requisits
+
+Decidir quins requisits s’implementen i amb quin grau de detall
+
+Validar que els requisits identificats satisfan els criteris de qualitat establerts
+
+**************************20.jpg****************************
+
+Digues quines de les afirmacions són certes respecte del diagrama d’activitats (UML) de preparació d’un menjar següent:
+
+Trieu-ne una o més:
+
+“Preheat oven” s’ha de fer abans de “Mix ingredients”
+
+“Mix ingredients” s’executa tan aviat com acaba “Chop vegetables”
+
+“Beat eggs” i “Chop vegetables han d’acabar en el mateix moment
+
+“Taste” ve després de “Serve”
+
+# Cap de les altres opcions indicades en aquesta llista
+
+**************************21.jpg****************************
+
+Considera el requisit funcional d’una botiga en línia definit en una fitxa (card) amb la història d’usuari:
+“Un usuari pot comprovar l’estat de les seves comandes recents”
+Indica com classificaries aquest requisit:
+
+Trieu-ne una o més:
+
+# Persistent
+
+Formal
+
+Implicit
+
+# Informal
+
+No-persistent
+
+# Explicit
+
+**************************22.jpg****************************
+
+Un dels problemes del desenvolupament de software és el que en anglès s’anomena “scope creep”. Indica quina de les següents és la millor definició d’aquest terme:
+
+Trieu-ne una:
+
+L’addició de nous requisits al sistema
+
+L’addició o modificació d’abast a un sistema en funcionament
+
+# L’addició de nous requisits un cop se suposa que ja s’han determinat tots
+
+L’addició o modificació de nous requisits a un sistema en funcionament
+
+La modificació de l’abast d’un sistema
+
+**************************23.jpg****************************
+
+En els diagrames d’activitat de l’UML, els nodes de combinació (merge)s’assemblen gràficament als de:
+
+Trieu-ne una:
+
+Crida a acció
+
+Reunió
+
+Unió
+
+Forquilla
+
+# Decisió
+
+**************************24.jpg****************************
+
+Digues quina de les coses següents caracteritza millor el
+que tracta de demostrar l'argument de satisfacció:
+
+Trieu-ne una:
+
+Si els requisits corresponen als objectius de les
+parts interessades, llavors les parts interessades els aconseguiran
+
+# Si el sistema final satisfà els requisits definits,
+llavors les parts interessades aconseguiran els objectius que desitgen
+
+Si s'han definit correctament els objectius, llavors
+el sistema permetrà aconseguir-los
+
+Si les parts interessades han definit correctament
+els objectius, els requisits són correctes
+
+**************************25.jpg**************************** 
+
+Digues quina deles afirmacions següents caracteritza millor
+què es un Sprint en el mètode àgil SCRUM.
+
+Trieu-ne una:
+
+Un conjunt de requisits que s'han d'implementar en la propera iteració del projecte
+
+La darrera fase del projecte que produeix elproducte final
+
+Una fase del projecte que s'ha de realitzar ràpidament quan el projecte va endarrerit
+
+# Una iteració que produeix un increment del sistema
+
+Una fase del projecte que produeix resultats ràpidament
+
+**************************26.jpg**************************** 
+
+La llista de control de validació que usem a l'assignatura
+inclou la pregunta:
+S’ha comprovat que cap cas d'ús és superflu?
+A quin dels "criteris de validació del contingut" següents
+creus que correspon millor aquesta pregunta?
+
+Trieu-ne una:
+
+Correctesa (classificació del requisit)
+
+Verificable
+
+Completesa (artefacte/document)
+
+Completesa (requisit)
+
+# Necessitat (requisit)
+
+**************************27.jpg**************************** 
+
+La negociació de requisits és una de les
+activitats bàsiques de l'Enginyeria de
+requisits. Indica quins dels següents són objectius d’aquesta negociaió.
+
+Trieu-ne una o més:
+
+# Analitzar la causa de cada conflicte
+
+# Documentar la resolució del conflicte
+
+# Identificar els conflictes
+
+# Resoldre els conflictes usant l’estratègia adequada
+
+Evitar els conflictes
+
+**************************28.jpg**************************** 
+
+En el desenvolupament d'un sistema orientat a un mercat,
+els competidors s'acostumen a considerar parts
+interessades. Indica en quina de les facetes següents es
+podrien classificar aquests competidors:
+
+Trieu-ne una:
+
+Mercat
+
+# Ús
+
+Desenvolupament
+
+Tecnologia
+
+Subjecte
+
+**************************29.jpg**************************** 
+
+De cara al desenvolupament d'un sistema d'ajuda als
+visitants d'un museu, que es basarà en l'ús de balises, els
+desenvolupadors volen fer una enquesta ben simple a una
+determinada població sobre els seus hàbits de visita a
+museus. Concretament, pensen demanar la freqüència de
+visita de museus, la durada de les visites, l'interval temporal
+de visita (festius, vacances, etc.) i el cost de l'entrada.
+Digues a quines (una o més) facetes del context
+correspondria aquesta enquesta.
+
+Trieu-ne una o més:
+
+# Subjecte
+
+Ús
+
+Desenvolupament
+
+Tecnologia
+
+**************************30.jpg**************************** 
+
+Digues quines de les afirmacions següents són certes en
+relació al Prototipatge i el mètode àgil Scrum:
+
+Trieu-ne una o més:
+
+En el pas de retrospectiva s'analitza l'adequació dels prototipus als objectius definits pels usuaris.
+
+En un "sprint planning" es poden fer prototipus
+
+El product backlog pot incloure la realització de prototipus
+
+# L'"sprint backlog" pot incloure la realització de prototipus
+
+# En un sprint es poden fer prototipus
+
+**************************31.jpg**************************** 
+
+Considera els requisits funcionals d'un projecte expressats mitjançant un diagrama de classes en UML. Indica quina de les següents és la millor classificació d'aquests requisits:
+
+Trieu-ne una:
+
+Informal/verificable/persistent 
+
+Informal/verificable/no persistent 
+
+Formal/verificable/no persistent 
+
+# Formal/verificable/persistent 
+
+Informal/no verificable/persistent
+
+**************************32.jpg**************************** 
+
+En Enginyeria de requisits, l'estudi del context és necessari perquè:
+
+Trieu-ne una:
+
+Determina el rol que han de fer les parts interessades
+
+#  Determina tot allò que cal tenir en compte per fer el desenvolupament del sistema
+
+Refina la visió del sistema
+
+Defineix el sistema a partir de la visió
+
+Determina els objectius que volen aconseguir les parts interessades
+
+**************************33.jpg**************************** 
+
+En quin (un o més) dels esdeveniments següents dei mètode SCRUM es poden definir, refinar, modificar o suprimir requisits del sistema?
+
+Trieu-ne una o més:
+
+Sprint planning (part 1)
+
+Sprint Retrospective
+
+Sprint planning (part 2) 
+
+# Sprint review
+
+Daily scrum
+
+**************************34.jpg**************************** 
+
+Les històries d'usuari són negociables. Això vol dir (una o més):
+
+Trieu-ne una o més:
+
+Si hi ha històries contradictòries, es pot negociar quines s'accepten o quines no.
+
+# El significat exacte de la història s'ha d'aclarir en una conversa entre els clients i els desenvolupadors
+
+Els clients han de negociar entre ells si volen o no volen la història en el sistema.
+
+Es pot negociar si la història s'implementa en el sistema.
+
+Clients i desenvolupadors han de negociar si la història s'ha d'implementar en el sistema.
+
+**************************35.jpg**************************** 
+
+Considera els requisits funcionals que expressen els diagrames de classes UML usats en l'enginyeria de requisits (modelització conceptual).
+Indica com classificaries els requisits expressats en aquests diagrames:
+
+Trieu-ne una o més:
+
+No-persistent
+
+Informal 
+
+# Persistent 
+
+# Formal
+
+# Explícit
+
+Implícit
+
+**************************36.jpg**************************** 
+
+Digues quina de les següents és la definició més encertada del que entenem per creativitat en Enginyeria de requisits:
+
+Trieu-ne una:
+
+# Capacitat de produir quelcom que és nou (original, no esperat) i apropiat (útil)
+
+Capacitat de crear solucions noves a problemes existents.
+
+Capacitat de crear requisits a partir dels objectius
+
+Capacitat de fer quelcom nou.
+
+Capacitat de l'enginyer de requisits de tenir noves idees.
+
+**************************37.jpg**************************** 
+
+Les històries d'usuari haurien de tenir els atributs recollits en l'acrònim INVEST.
+Digues quin d'aquests atributs fa que les històries d'usuaris continguin parts no persistents
+
+Trieu-ne una:
+
+Independent
+
+Small
+
+Estimatable
+
+# Negociable
+
+Valuosa
+
+Testable
+
+**************************38.jpg**************************** 
+
+Indica quina/quines de les afirmacions següents són certes respecte de la validació de requisits:
+
+Trieu-ne una o més:
+
+# Comprova que els artefactes creats durant l'enginyeria de requisits satisfan els criteris de qualitat establerts.
+
+Requereix disposar dels requisits i del sistema.
+
+Comprova que els artefactes creats durant l'enginyeria de requisits satisfan els criteris de satisfacció definits.
+
+Comprova que els artefactes creats durant l'enginyeria de requisits estan implementats.
+
+**************************39.jpg**************************** 
+
+En relació a la definició d'objectius, el "Software Engineering Code of Ethics and Professional practice" diu que els enginyers de software:
+
+Trieu-ne una:
+
+només han de participar en projectes que tinguin els objectius ben definits
+
+no han de participar en projectes amb objectius que no comparteixen
+
+# s'asseguraran que hi hagi objectius adequats i assolibles en tots els projectes en que treballen o que proposen
+
+no han de participar en projectes que no tinguin objectius SMART
+
+només han de participar en projectes que tinguin els objectius SMART
+
+
+**************************40.jpg**************************** 
+
+Considera l'objectiu plantejat pel president Kennedy el 1961
+"Crec que aquesta nació hauria de dedicar-se a assolir l'objectiu, abans d'acabar aquesta dècada, de fer aterrar un home a la Lluna i fer-lo tornar sa i estalvi cap a la Terra"
+i digues quins (un o més) dels següents components dels objectius SMART conté:
+
+Trieu-ne una o més:
+
+# Realista
+
+# Específic
+
+# Acotat temporalment
+
+# Mesurable
+
+**************************41.jpg**************************** 
+
+Per que es diu que en els metodes agils el cost de la no persistencia pot ser baix si l'equip de desenvolupament i manteniment és estable?
+
+Trieu-ne una:
+
+Perque llavors les coses que es necessiten saber són estables
+
+Perque llavors l'equip és persistent
+
+Perque llavors el propi sistema és estable
+
+Perque llavors acostumen a ser equips petits
+
+# Perque llavors hi acostuma a haver algú de l'equip que sap el que es necessita saber
+
+**************************42.jpg**************************** 
+
+[diagrama d'activitats]
+
+El "Make payment" s'ha de fer abans el "Ship order"
+
+# El "Send invoice" es pot fer abans del "Ship order"
+
+el "Fill order" i el "Send invoice" es poden fer en paral·lel
+
+# Es pot "Close order" sense haver-se fet el "Make payment"
+
+**************************43.jpg**************************** 
+
+Una de les lliçons que ensenya l'experiència és que l'enginyer de requisits és un pont entre... 
+
+Trieu-ne una: 
+
+Els desenvolupadors del sistema i l'organització per les quals treballen. 
+
+Les diverses parts interessades (quan n'hi ha més d'una) 
+
+Els encarregats de desenvolupar el sistema (enginyers de software, programadors, etc.) 
+
+Les organitzacions per les quals treballen les parts interessades i els desenvolupadors del sistema 
+
+# Les parts interessades i els desenvolupadors del sistema 
+
+**************************44.jpg**************************** 
+
+Digues quina de les següents afirmacions caracteritza millor què és un prototipus evolutiu. 
+Un prototipus evolutiu és una versió d'un sistema que va 
+evolucionant 
+
+Trieu-ne una: 
+
+...fins que s'acaba la fase d'enginyeria de requisits. 
+
+# ...fins que esdevé el sistema definitiu. 
+
+... entre les diverses capes (presentació, etc.) del sistema. 
+
+...fins que els dissenyadors fan el sistema definitiu. 
+
+...a mesura que canvien els objectius de les parts interessades. 
+
+**************************45.jpg**************************** 
+
+Suposa un sistema que tracta de restaurants (reserves, facturació, programa de punts, etc.). Considera en aquest sistema l'afirmació: 
+"Un cop ha acabat l'àpat i el cambrer ha preparat la factura, el cambrer comunicarà al sistema el client, la data i l'import de la factura" 
+Aquesta afirmació és: 
+
+Trieu-ne una: 
+
+Un objectiu 
+
+Un requisit de qualitat 
+
+# Una expectativa 
+
+Un requisit funcional 
+
+Una restricció 
+
+**************************46.jpg**************************** 
+Digues quina de les frases següents defineix millor que s'entén per validació d'objectius en enginyeria de requisits:
+
+Trieu-ne una:
+
+Comprovar que els requisits satisfan els objectius
+
+Comprovar que el sistema permet assolir els objectius
+
+# Comprovar que les parts interessades volen realment assolir els objectius indicats
+
+Comprovar que els objectius no estan en contradicció amb els requisits
+
+Assegurar-se que els objectius són suficients per a desenvolupar el sistema.
+
+**************************47.jpg**************************** 
+Un requisit és verificable quan:
+
+Trieu-ne una:
+
+Es pot verificar formalment que es compleix
+
+Es pot verificar que compleix els objectius
+
+# Es pot comprovar que el sistema el satisfà
+
+Es pot verificar que és necessari per a satisfer els objectius
+
+Es pot verificar que no es inconsistent amb els altres requisits
+
+**************************48.jpg**************************** 
+Es diu que un requisit és verificable quan:
+
+Trieu-ne una:
+
+Es pot verificar que és necessari per a l'assoliment dels objectius del sistema
+
+Es pot verificar que hi ha almenys un sistema que el satisfarà
+
+# Una màquina pot verificar que el sistema el satisfà
+
+Es pot verificar el seu origen
+
+Es pot verificar que contribueix a l'assoliment dels objectius del sistema
+
+**************************49.jpg**************************** 
+Suposa un sistema que tracta de restaurants (reserves, facturació, programa de punts, etc.). Considera en aquest sistema l'afirmació:
+
+"Un cop ha acabat l'àpat i el cambrer ha preparat la factura, el cambrer comunicarà al sistema el client, la data i l'import de la factura"
+
+Aquesta afirmació és:
+
+Trieu-ne una:
+
+Una restricció
+
+Un requisit funcional
+
+Un requisit de qualitat
+
+# Una expectativa
+
+Un objectiu
+
+Una propietat del domini
+
+**************************50.jpg**************************** 
+Digues quina de les frases següents creus que és més certa respecte dels requisits emergents.
+
+Trieu-ne una:
+
+Són requisits que emergeixen durant el funcionament del sistema però, de fet, es podien haver descobert durant l'enginyeria de requisits
+
+# Són requisits que emergeixen durant el desenvolupament o l'ús del sistema.
+
+Són requisits que emergeixen durant l'enginyeria de requisits d’un sistema
+
+Són requisits que emergeixen de les parts interessades durant l'enginyeria de requisits
+
+Són requisits que emergeixen de l'anàlisi dels objectius que volen assolir les parts interessades
+
+**************************51.jpg**************************** 
+Indica quines (una o més) de les següents afirmacions són certes respecte dela relació entre els mètodes àgils de desenvolupament i els esquemes conceptuals
+
+Trieu-ne una o més:
+Usant mètodes àgils no és necessari fer els esquemes conceptuals
+
+# En els mètodes àgils és imprescindible fer els esquemes conceptuals
+
+Si, usant mètodes àgils, es fan esquemes conceptuals, aquests han de ser verificables.
+
+Usant mètodes àgils es poden fer els esquemes conceptuals, però no és obligatori.
+
+Si, usant mètodes àgils, es fan esquemes conceptuals, aquests no cal que siguin verificables.
+
+**************************52.jpg**************************** 
+Durant el procés d'enginyeria de requisits d'un sistema que contindrà una base de dades, t'adones que les lleis de protecció de dades no s’aplicaran en aquest cas perquè les dades processades pel sistema no es refereixen a persones o organitzacions.
+
+Quina de les coses següents queda afectada per aquest fet?
+
+Trieu-ne una:
+
+La zona gris de la frontera del sistema
+
+#La frontera del context
+
+La frontera del sistema
+
+Les interfícies del sistema
+
+**************************53.jpg**************************** 
+INVEST és l'acrònim dels atributs d'una bona història d'usuari. En aquest acrònim, la E vol dir:
+
+Trieu-ne una:
+
+Event-based
+
+# Estimable
+
+Expectation
+
+Enduring
+
+Error-free
+
+Excelent
+
+**************************54.jpg**************************** 
+La llista de control de validació que usem a l'assignatura inclou la pregunta:
+
+Estan identificades les parts interessades del projecte?
+
+A quin dels “criteris de validació del contingut" següents creus que correspon millor aquesta pregunta?
+
+Trieu-ne una:
+
+# Completesa (artefacte/document)
+
+Completesa (requisit)
+
+Consistència
+
+Correctesa (requisit)
+
+**************************55.jpg**************************** 
+L'ús de llistes de control és una tècnica d'ajuda a la validació de requisits perquè:
+
+Trieu-ne una:
+
+Les llistes de control es poden usar com casos de prova
+
+La validació mitjançant llistes de control es pot fer automàticament
+
+# Les llistes de control poden indicar aspectes concrets que s'han de validar
+
+Permet controlar com es fa la validació
+
+Les llistes de control es poden usar en l'argumentació de satisfacció d'objectius
+
+**************************56.jpg**************************** 
+Indica quines de les següents són parts persistents en una història d'usuari:
+
+Trieu-ne una o més:
+
+Els punts d'història
+
+La conversa
+
+# La fitxa
+
+Les parts formals de la història
+
+# Les proves d'acceptació
+
+**************************57.jpg**************************** 
+La frase: "La tasca més difícil de la construcció d’un sistema software és decidir què s’ha de construir". S'atribueix a:
+
+Trieu-ne una:
+
+Grady Booch
+
+Steve Jobs
+
+Klaus Pohl
+
+Watts S. Humphrey
+
+# Fred Brooks
+
+**************************58.jpg**************************** 
+Indica quina de les afirmacions següents respecte dels prototipus verticals és mes encertada:
+
+Trieu-ne una:
+
+# És una implementació completa d'una part del sistema
+
+És una implementació d'una capa vertical d'un sistema software
+
+És una implementació parcial d'una funcionalitat del sistema
+
+Es pot combinar amb un prototipus horitzontal.
+
+Es pot realitzar com a prototipus de paper.
+
+**************************59.jpg**************************** 
+Indica quines de les raons següents justifiquen el principi de necessitat dels esquemes conceptuals:
+
+Trieu-ne una o mes:
+
+# Per desenvolupar un sistema cal que els seus requisits funcionals siguin explicits.
+
+Per desenvolupar un sistema cal que els seus requisits funcionals siguin persistents
+
+# Per desenvolupar un sistema cal que els seus requisits funcionals siguin verificables.
+
+Per desenvolupar un sistema cal que els seus requisits funcionals siguin formals
+
+**************************60.jpg**************************** 
+Digues quina de les coses següents caracteritza millor el
+
+que tracta de demostrar l'argument de satisfacció:
+
+Trieu-ne una:
+
+# Si el sistema final satisfà els requisits definits, llavors les parts interessades aconseguiran els objectius que desitgen.
+
+Si s'han definit correctament els objectius, llavors el sistema permetrà aconseguir-los.
+
+Si les parts interessades han definit correctament els objectius, els requisits són correctes.
+
+Si els requisits corresponen als objectius de les parts interessades, llavors les parts interessades els aconseguiran.
+
+**************************61.jpg**************************** 
+Les històries d'usuari haurien de tenir els atributs recollits en l'acrònim INVEST.
+Digues quin d'aquests atributs fa que les històries d'usuaris siguin verificables
+
+Trieu-ne una:
+
+Small
+
+Negociable
+
+# Testable
+
+Valuosa
+
+Independent
+
+Estimatable
+
+**************************62.jpg**************************** 
+Considera un text que especifiqui un cas d'ús, tal com ho fem a l'assignatura
+Digues de quins tipus és:
+
+Trieu-ne una o més:
+
+Verificable
+
+Formal
+
+Implícit
+
+# Informal
+
+# Persistent
+
+**************************63.jpg**************************** 
+Digues quins (un o més) dels següents elements constitueixen, en termes generals, els objectius dels projectes
+
+Trieu-ne una o més:
+
+El valor que el sistema ha de proporcionar a cada part interessada crítica
+
+# El preu màxim que cada part interessada crítica haurà de pagar.
+
+El preu que cada part interessada crítica haurà de pagar
+
+El preu mínim que cada part interessada crítica haurà de pagar.
+
+El valor màxim que el sistema ha de proporcionar a cada part interessada crítica
+
+# El valor mínim que el sistema ha de proporcionar a cada part interessada crítica
+
+**************************64.jpg**************************** 
+Indica quines són les tres dimensions de l'Enginyeria de requisits, segons Pohl:
+
+Trieu-ne una o més:
+
+# Contingut
+
+Gestió dels requisits
+
+# Documentació
+
+# Acord
+
+Validació
+
+**************************65.jpg**************************** 
+Indica quins dels següents són conceptes principals de l'enginyeria de requisits:
+
+Trieu-ne una o mes:
+
+Proves funcionals
+
+# Requisits de qualitat
+
+# Parts interessades
+
+# Objectius
+
+Enginyeria del software
+
+**************************66.jpg**************************** 
+Digues quina de les següents afirmacions és més exacta respecte de la relació entre casos d'ús i històries d'usuari:
+
+Trieu-ne una:
+
+# Una història d'usuari és similar a un escenari d'un cas d'ús
+
+Hi ha casos d'ús que no es poden expressar en una o més històries d'usuari
+
+Una història d'usuari és similar a l'escenari principal d'un cas d'ús
+
+Una història d'usuari és similar a una de les extensions d'un cas d'ús
+
+Una història d'usuari és bàsicament el mateix que un cas d'ús, però amb menys detall
+
+**************************67.jpg**************************** 
+Quins quin dels següents NO és un objectiu de l'elaboració de l’estudi del context del projecte:
+
+Trieu-ne una:
+
+Conèixer de quines maneres es realitzen actualment activitats semblants en altres àmbits (si
+n'hi han), i avaluar la seva aplicació a l'àmbit del projecte.
+
+# Conèixer els objectius que hem d'assolir en el projecte
+
+Conèixer de quines maneres es realitza actualment l'activitat que es pretén millorar en l'àmbit considerat, i els resultats que s'obtenen en cada cas.
+
+Conèixer les característiques de la tecnologia “nova" a utilitzar que siguin rellevants per a l’enginyeria de requisits del projecte.
+
+Determinar quines són les parts interessades del projecte i què s'espera que hi aporti cadascuna d'elles
+
+**************************68.jpg**************************** 
+Digues quina de les següents és la millor definició del cost de la no-persistència dels requisits funcionals
+
+Trieu-ne una:
+
+És el cost mitjà d'actualitzar la documentació multiplicat pel nombre de vegades que s'ha d'actualitzar per conèixer un requisit
+
+És el cost mitjà d'actualitzar la documentació multiplicat pel nombre de vegades que s'ha
+d'actualitzar per conèixer un requisit que no està disponible.
+
+# És el cost mitjà de recuperar un requisit multiplicat pel nombre de vegades que cal saber-los i no estan disponibles.
+
+És el cost mitjà de recuperar un requisit multiplicat pel nombre de vegades que s'ha d'actualitzar la documentació.
+
+És el cost mitjà de recuperar un requisit multiplicat pel nombre de vegades que cal saber-los.
+
+**************************69.jpg**************************** 
+L’avantatge principal dels requisits formals és que:
+
+Select one:
+
+Poden ser no-persistents
+
+Són explícits
+
+# Permeten la generació automàtica de codi.
+
+Són persistents
+
+Són verificables
+
+**************************70.jpg**************************** 
+Indica en quines (una o més) de les següents activitats de SCRUM es poden determinar requisits:
+
+Trieu-ne una o més:
+
+Daily scrum
+
+Sprint planning meeting
+
+Sprint
+
+# Sprint review
+
+Sprint restrospective
+
+**************************71.jpg**************************** 
+La plantilla més popular per definir històries d'usuari és:
+
+Trieu-ne una:
+
+As an <actor>, I want <some set of actions>
+
+As a <type of user>, I want <some goal>
+
+# As a <type of user>, I want <some goal> so that <some reason>
+
+As a <user> I want <a user story> in order to <achieve a goal>
+
+As an <actor>, | want <some set of actions> as a <main scenario>
+
+**************************72.jpg**************************** 
+Es diu que "per implementar un requisit funcional cal que sigui verificable” perquè
+
+Trieu-ne una:
+
+Una persona o una màquina pot comprovar que el software satisfà el requisit funcional.
+
+# En cas contrari, qualsevol implementació és vàlida.
+
+Els requisits verificables poden transformar-se en formals.
+
+Els requisits verificables són explícits
+
+S'ha de comprovar que el requisit sigui verificable
+
+**************************73.jpg**************************** 
+Una manera alternativa de veure els objectius d'una part interessada es que són:
+
+Trieu-ne una:
+
+Les condicions econòmiques per tal que accepti el sistema
+
+# Les condicions necessàries i suficients per tal que accepti el sistema
+
+Les condicions suficients per tai que accepti el sistema
+
+Les condicions que desitja que satisfaci el sistema
+
+Les condicions necessàries per tal que accepti el sistema
+
+**************************74.jpg**************************** 
+Digues quines (una o més) de les afirmacions següents són correctes respecte de les parts interessades.
+
+Trieu-ne una o més:
+
+# Les parts interessades d'un sistema inclouen totes les persones que tenen un interès en el sistema.
+
+La legislació existent pot ser una part interessada.
+
+Un sistema ja existent pot ser una part interessada.
+
+# Un competidor pot ser una part interessada.
+
+**************************75.jpg**************************** 
+Digues quina de les afirmacions següents respecte de l'observació etnogràfica és més encertada:
+
+Trieu-ne una:
+
+És una variant de l'observació directa.
+
+És un mètode d'obtenció de requisits a partir de les persones que fan una feina determinada.
+
+És l'observació de la feina que fan actualment les parts interessades.
+
+# L'enginyer de requisits aprèn la feina que es fa fent-la durant un cert temps.
+
+És l'observació del procediment de determinació de requisits per part de les parts interessades.
+
+=== Exercici sobre Objectius en Enginyeria de Requisits ===
+
+Pregunta 1:
+
+Considera el sistema Atenea tal com l'usem al curs d'Enginyeria de Requisits. Quan es va construir, es van tenir en compte els estudiants com a part interessada, i encara ho són ara per al possible desenvolupament de noves versions. Digues quins dels següents són objectius clars dels estudiants respecte del sistema Atenea (un o més).
+
+Trieu-ne una o més: 
+
+Estudiar les transparències de les classes que hagin publicat els professors.
+
+Accedir directament a la biblografia bàsica i complementària de l'assignatura.
+
+# Accedir a les transparències de les classes publicades pels professors.
+
+# Conéixer l'activitat que ha de realitzar per al seguiment de l'assignatura.
+
+Pregunta 2:
+
+El text original que va definir el concepte de SMART sembla ser: Doran, G. T. (1981). There's a S.M.A.R.T. way to write management's goals and objectives. Management Review, Volume 70, Issue 11(AMA FORUM), pp. 35-36. (veure document "Article Doran sobre objectius SMART"
+
+Llegeix-lo i digues quines de les afirmacions següents són certes en relació a aquest text:
+
+Trieu-ne una o més: 
+
+# Es distingeix entre Goal i Objective.
+
+La R de SMART s'interpreta com a Relevant.
+
+Considera que un exemple d'objectiu pot ser "Realitzar totes les activitats de l'empresa amb honestedat, integritat i justicia"
+
+# Considera que els objectius poden ser SMART, però no les goals.
+
+# La A de SMART s'interpreta com a Assignable.
+
+Pregunta 3:
+
+Estudia la presentació d'Smart objectives que hi al vídeo: Metas SMART y Productividad Play Video i digues quines de les següents afirmacions en el context d'aquest vídeo són certes:
+
+Trieu-ne una o més: 
+
+Dóna diversos exemples d'objectius SMART
+
+# La A s'interpreta com a "Alcanzable"
+
+La R s'interpreta com a "Realista"
+
+La R s'interpreta com a "Relevante"
+
+Pregunta 4:
+
+Estudia l'article de Clemens i Bass indicat a l'enunciat del qüestionari, i digues quines de les següents són CATEGORIES d'objectius de negoci segons els autors:
+
+Trieu-ne una o més: 
+
+# Assolir la responsabilitat social
+
+Millorar les condicions laborals dels empleat
+
+Augmentar els dividends pagats als accionistes
+
+Millorar la satisfacció dels clients
+
+Augmentar les vendes de l'empresa
+
+# Mantenir el creixement i la continuitat de l'organització 
+
+# Millorar els processos de negoci
+
+# Assolir objectius financers
+
+Pregunta 5:
+
+Estudia la presentació d'Smart objectives que hi al vídeo: How to write a SMART Goal Play Video i digues quines de les següents afirmacions en el context d'aquest vídeo són certes: 
+
+Trieu-ne una o més: 
+
+Esmenta que la R en SMART es pot interpretar com Realistic i també com Relevant 
+
+# Considera que l'objectiu "I'm going to try to lift weights" no és específic
+
+# Considera que l'objectiu "I will bench press 5 repetitions of 200 lbs by the end of December" és SMART
+
+# Esmenta que la A en SMART es pot interpretar com Agreed To i també com Attainable
+
+Pregunta 6:
+
+Llegeix l'entrada sobre SMART criteria que hi a la wikipedia (anglès) (http://en.wikipedia.org/wiki/SMART_criteria) i digues quines de les següents afirmacions són certes:
+
+Trieu-ne una o més:
+
+Tots els alternative terms de la T es refereixen al temps
+
+# La A s'interpreta (most common) com a Achievable (assolible)
+
+Es pot acceptar la A com a Attainable i agafar la R com a Realistic (alternative)
+
+# La R es pot interpretar com a Realistic (alternative)
+
+Pregunta 7:
+
+Digues quina de les frases següents defineix millor què s'entén per validació d'objectius en enginyeria de requisits:
+
+Trieu-ne una: 
+
+Assegurar-se que els objectius són suficients per a desenvolupar el sistema.
+
+Comprovar que el sistema permet assolir els objectius
+
+# Comprovar que les parts interessades volen realment assolir els objectius indicats 
+
+Comprovar que els requisits satisfan els objectius
+
+Comprovar que els objectius no estan en contradicció amb els requisits
+
+Pregunta 8:
+
+Considera el sistema Atenea tal com s'usa a l'assignatura, i a altres llocs de la UPC. Digues quins dels següents són objectius que les parts interessades de la UPC aconsegueixen gràcies a l'ús de l'Atenea.
+
+Trieu-ne una o més: 
+
+# Els centres docents de la UPC poden transmetre la imatge que usen plataformes docents avançades
+
+La FIB pot fer grups d'assignatures més nombrosos (més estudiants per grup)
+
+El delegat dels estudiants d'una assignatura pot veure l'opinió dels estudiants sobre la marxa de l'assignatura
+
+Els estudiants presenten els exercicis demanats en el termini establert
+
+Els professors poden preparar les transparències de classe amb més facilitat.
+
+Els estudiants treuen bones qualificacions en els qüestionaris plantejats a l'Atenea
+
+# Els estudiants poden respondre via web qüestionaris en hores de classe.
+
+# Els professors poden indicar als estudiants els terminis en què han de presentar els seus treballs.
+
+Pregunta 9:
+
+Considera el sistema Atenea tal com l'usem a l'assignatura. Digues quins dels següents són rols que hi fan els estudiants:
+
+Trieu-ne una o més: 
+
+# Assabentar-se de les dates de lliurament dels treballs
+
+# Accedir a les transpes de les classes, quan n'hi ha
+
+Cursar l'assignatura amb aprofitament
+
+# Respondre els qüestionaris plantejats
+
+# Consultar les qualificacions obtingudes a l'assignatura Retroacció
+
+Pregunta 10:
+
+Considera un lloc web que és un mercat de freelances (com ara freelancer.com). Suposa que aquest lloc web tingués l'objectiu (que no té): Els freelances obtindran una feina de les característiques que els interessen en un temps màxim de dos mesos a partir del moment que es declaren disponibles per a noves feines. Respecte d'aquest objectiu, digues quines de les afirmacions següents són certes:
+
+Trieu-ne una o més: 
+
+# És un objectiu T (acotat Temporalment)
+
+És un objectiu R (Realista)
+
+# És un objectiu S (eSpecífic)
+
+# És un objectiu vàlid en Enginyeria de Requisits, perquè és un fi que una part interessada vol aconseguir mitjançant el sistema
+
+# És un objectiu M (Mesurable)
+
+Pregunta 11:
+
+Estudia l'article de Clemens i Bass indicat a l'enunciat del qüestionari, i digues quines de les afirmacions següents són certes:
+
+Trieu-ne una o més: 
+
+# Un objectiu de la categoria "Assolir els objectius financers" podria ser Reduir els costos d'operació quan l'empresa adopti el sistema.
+
+# Un objectiu podria ser que un programador vol millorar els seus coneixements d'un cert llenguatge de programació.
+
+# Un objectiu de la categoria "Satisfer la responsabilitat amb els accionistes" podria ser que el director financer vol augmentar el preu de les accions en un 10% en els propers sis mesos. 
+
+L'objectiu "El sistema no ha de generar massa alarmes" és de la categoria "Satisfer la responsabilitat amb els empleats"
+
+L'objectiu "Volem introduir el producte al mercat aviat, abans no ho facin els competidors" és de la categoria "Gestionar la qualitat i reputació dels productes"
+
+Pregunta 12:
+
+Considera un client de correu com ara el Gmail. Indica quins dels següents es poden considerar rols que hi fan els seus usuaris:
+
+Trieu-ne una o més: 
+
+Tenir els correus ben organitzats
+
+Detectar automàticament el correu brossa
+
+# Crear les etiquetes que es desitgin
+
+# Preparar els correus que es volen enviar
+
+# Arxivar els correus que es vulguin guardar
+
+Pregunta 13:
+
+Considera el sistema Atenea tal com l'usem al curs d'Enginyeria de Requisits. Quan es va construir, es van tenir en compte els professors com a part interessada, i encara ho són ara per al possible desenvolupament de noves versions. Digues quins dels següents són OBJECTIUS dels professors respecte del sistema Atenea.
+
+Trieu-ne una o més: 
+
+Estudiar a fons el temari de l'assignatura
+
+# Poder anunciar les classes que es faran i quan es faran
+
+Actualitzar la guia docent de l'assignatura
+
+# Publicar els exercicis que han de fer els estudiants
+
+Facilitar l'elaboració de les transparències de les classes
+
